@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Kristi|Montserrat:400,700");
+body {
+  overflow-x: hidden;
+  margin: 0 auto;
+  min-width: 292px;
+  width: 100vw;
+  height: 100vh;
+  background: url(drum-kit.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #171718;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px; }
+
+.title, .name {
+  font-family: 'Kristi', cursive;
+  font-weight: bolder;
+  font-size: 46px;
+  text-align: center;
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  transform: rotate(-7deg); }
+
+.name {
+  top: 68px;
+  font-size: 26px; }
+  .name a {
+    color: #171718; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40%;
+  position: absolute;
+  bottom: 75px;
+  width: 100%; }
+
+.z,
+.x,
+.c,
+.v,
+.b,
+.n,
+.m,
+.space {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80px;
+  width: 80px;
+  border: 10px solid #171718;
+  position: relative;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-weight: 700; }
+  .z:active:before,
+  .x:active:before,
+  .c:active:before,
+  .v:active:before,
+  .b:active:before,
+  .n:active:before,
+  .m:active:before,
+  .space:active:before {
+    content: attr(data-before);
+    position: absolute;
+    background: #31e682;
+    height: 111%;
+    width: 111%;
+    z-index: -1;
+    bottom: 10px;
+    right: 10px; }
+
+.b-text {
+  font-family: 'Kristi', cursive;
+  font-size: 21px;
+  margin-bottom: -10px; }
+
+.animate {
+  animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -moz-animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }
+
+@keyframes shake {
+  10%,
+	90% {
+    transform: translate3d(-1px, 0, 0); }
+  20%,
+	80% {
+    transform: translate3d(0px, 0, 0); }
+  30%,
+	50%,
+	70% {
+    transform: translate3d(-2px, 0, 0); }
+  40%,
+	60% {
+    transform: translate3d(2px, 0, 0); } }
+@media screen and (max-width: 1150px) {
+  body {
+    background: #ffffff; }
+
+  .title, .name {
+    margin-bottom: 25px; }
+
+  .container {
+    bottom: 0;
+    flex-wrap: wrap; } }
+
+/*# sourceMappingURL=style.css.map */
